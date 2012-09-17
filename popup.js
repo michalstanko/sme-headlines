@@ -6,7 +6,7 @@ $(function() {
     var $articleBody = $("#articleBody");
     var $btnBackToLinks = $("#btnBackToLinks");
 
-    var url = "http://rss.sme.sk/rss/rss.asp?id=smenajcit24";
+    var url = "http://rss.sme.sk/rss/rss.asp?id=smenajcit4";
     var html = "";
     var $ul = $("#headlines");
 
