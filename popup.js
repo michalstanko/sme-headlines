@@ -4,7 +4,7 @@ $(function() {
 
     var $articleHeader = $("#articleHeader");
     var $articleBody = $("#articleBody");
-    var $btnBackToLinks = $("#btnBackToLinks");
+    var $btnBack = $("#btnBack");
 
     var url = "http://rss.sme.sk/rss/rss.asp?id=smenajcit4";
     var html = "";
@@ -41,7 +41,7 @@ $(function() {
     }
 
     function bindEvents() {
-        $btnBackToLinks.bind("click", function(ev) {
+        $btnBack.bind("click", function(ev) {
             ev.preventDefault();
             showLinks();
         });

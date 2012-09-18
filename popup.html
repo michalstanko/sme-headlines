@@ -7,7 +7,7 @@
     html, body, table, ul, ol, li { padding:0; margin:0; }
 
     html { width:450px; }
-    body { padding:10px; font:13px/1.4 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2); }
+    body { padding:10px; font:13px/1.46 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2); }
 
     
     #headlines { list-style: none; }
@@ -22,6 +22,9 @@
     #articleWr img { width:100%; height:auto; } /* fit images */
     #articleWr .aico { float:left; width:36px; height:36px; margin:10px 10px 0 0; }
     .fblk { display:none; }
+
+    #btnBack { position:fixed; top:0; left:-10px; width:100px; height:100%; cursor:pointer; -webkit-transition:background-color .2s linear; }
+    #btnBack:hover { background-color:rgba(100,100,100,.2); background-image:url(icon-back-button.gif); background-repeat:repeat-y; background-position:7px; }
     </style>
 </head>
 <body>
@@ -30,9 +33,9 @@
     </div>
 
     <div id="articleWr">
-        <div><input id="btnBackToLinks" type="button" value="&larr; Späť" /></div>
         <div id="articleHeader"></div>
         <div id="articleBody"></div>
+        <span id="btnBack"></span>
     </div>
 
     <script src="zepto.min.js"></script>
