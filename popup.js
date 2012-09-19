@@ -72,7 +72,7 @@ $(function() {
             $ul.html(html);
         },
         error: function() {
-            console.log("error");
+            console.log("error"); // TODO
         }
     });
 
