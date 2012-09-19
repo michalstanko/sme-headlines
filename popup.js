@@ -21,10 +21,6 @@ $(function() {
         var $doc = $(doc);
         var $article = $doc.find("#itext_content");
         $articleHeader.html("").append($doc.find("h1").last());
-        /*
-        var $newH1 = $articleHeader.find("h1");
-        $newH1.html("<h1><a href='" + url + "'>" + $newH1.html() + "</a></h1>");
-        */
         $articleBody.html("").append($article);
     }
 
