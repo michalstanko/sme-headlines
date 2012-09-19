@@ -11,12 +11,6 @@ $(function() {
     var $ul = $("#headlines");
 
 
-    function goToArticle() {
-        chrome.tabs.create({
-            url: this.href
-        });
-    }
-
     function setArticle(url, doc) {
         var $doc = $(doc);
         var $article = $doc.find("#itext_content");
