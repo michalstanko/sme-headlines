@@ -34,6 +34,17 @@ $(function() {
         window.scrollTo(0, 0);
     }
 
+    function getArticle(url) {
+        $.ajax({
+            url: url,
+            dataType: "html",
+            success: function(doc) {
+                setArticle(url, doc);
+                showArticle();
+            }
+        });
+    }
+
     function showLinks() {
         $articleWr.hide();
         $linksWr.show();
@@ -44,6 +55,15 @@ $(function() {
         $btnBack.bind("click", function(ev) {
             ev.preventDefault();
             showLinks();
+        });
+
+        $articleWr.delegate("a", "click", function(ev) {
+            ev.preventDefault();
+            var url = this.href;
+            if (url.indexOf("sme.sk/") === -1) {
+                return false;
+            }
+            getArticle(url);
         });
     }
 
@@ -69,14 +89,7 @@ $(function() {
     $("#headlines").delegate("li", "click", function() {
         var $link = $(this).find("a");
         var url = $link.attr("href");
-        $.ajax({
-            url: url,
-            dataType: "html",
-            success: function(doc) {
-                setArticle(url, doc);
-                showArticle();
-            }
-        });
+        getArticle(url);
     });
 
     bindEvents();
