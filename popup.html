@@ -7,13 +7,17 @@
     html, body, table, ul, ol, li { padding:0; margin:0; }
 
     html { width:450px; }
-    body { padding:10px; font:13px/1.46 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2); }
+    body { padding:10px; font:13px/1.46 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2); background:#f4f4f4; }
 
+    #menu { float:left; margin:0; list-style:none; }
+    #menu li, #menu a { float:left; margin:0; padding:0; }
+    #menu a { border:1px solid #c2c2c2; padding:3px 15px; color:#5F5F5F; }
+    #menu a.sel { background:#fff; }
     
-    #headlines { list-style: none; }
+    #headlines { clear:both; list-style: none; }
     #headlines a { color:#A7090C; font-size:14px; font-weight:bold; }
-    #linksWr li { margin:0; margin-top:.5em; cursor:pointer; }
-    #linksWr li:hover { outline:4px solid #eee; background:#eee; }
+    #headlines li { margin:0; padding:5px; border-radius:8px; cursor:pointer; }
+    #headlines li:hover { background:#eee; }
     .pubDate { color:#666; font-size:11px; }
 
     #articleWr { display:none; font-size:14px; }
@@ -29,6 +33,10 @@
 </head>
 <body>
     <div id="linksWr">
+        <ul id="menu">
+            <li><a href="#frontpage" class="frontpage sel">Titulka</a></li>
+            <li><a href="#most-read-4-hrs" class="naj4h">Naj za 4h</a></li>
+        </ul>
         <ul id="headlines"></ul>
     </div>
 
