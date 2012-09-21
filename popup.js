@@ -17,6 +17,7 @@ $(function() {
         var $article = $doc.find("#itext_content");
         $articleHeader.html("").append($doc.find("h1").last());
         $articleBody.html("").append($article);
+        $articleBody.find("div").css("width", "auto"); // some DIVs have inline styles setting their width
     }
 
     function showArticle() {
