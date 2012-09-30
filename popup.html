@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -7,37 +7,52 @@
     html, body, table, ul, ol, li { padding:0; margin:0; }
 
     html { width:450px; }
-    body { padding:10px; font:13px/1.46 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2); background:#f4f4f4; }
+    body { padding:10px 5px; font:13px/1.46 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2);}
 
-    #menu { float:left; margin:0; list-style:none; }
+    #menu { float:left; margin:0; margin-bottom:1em; list-style:none; }
     #menu li, #menu a { float:left; margin:0; padding:0; }
-    #menu a { border:1px solid #c2c2c2; padding:3px 15px; color:#5F5F5F; }
-    #menu a.sel { background:#fff; }
+    #menu a { border:1px solid #c2c2c2; padding:3px 15px; color:#5F5F5F; background:#eee; }
+    #menu a.sel { text-decoration:none; background:#fff; }
     
     #headlines { clear:both; list-style: none; }
     #headlines a { color:#A7090C; font-size:14px; font-weight:bold; }
     #headlines li { margin:0; padding:5px; border-radius:8px; cursor:pointer; }
-    #headlines li:hover { background:#eee; }
+    #headlines li:hover { position:relative; top:1px; left:1px; background:#eee; }
     .pubDate { color:#666; font-size:11px; }
 
-    #articleWr { display:none; font-size:14px; }
+    #articleWr { display:none; font-size:14px; padding:0 10px; }
     #articleWr h1 { font-size:25px; line-height:1; letter-spacing:-1px; color:#990003; }
     #articleWr p, #articleWr ul, #articleWr ol, #articleWr table { margin-bottom:.8em; }
-    #articleWr img { width:100%; height:auto; } /* fit images */
+    #articleWr img { float:none; max-width:100%; height:auto; } /* fit images */
     #articleWr .aico { float:left; width:36px; height:36px; margin:10px 10px 0 0; }
-    .fblk { display:none; }
 
     #btnBack { position:fixed; top:0; left:-10px; width:100px; height:100%; cursor:pointer; -webkit-transition:background-color .2s linear; }
     #btnBack:hover { background-color:rgba(100,100,100,.2); background-image:url(icon-back-button.gif); background-repeat:repeat-y; background-position:7px; }
+    
+    .fblk { display:none; }
+    iframe[src*='facebook.com'] { display:none; }
     </style>
 </head>
 <body>
+
     <div id="linksWr">
+        
         <ul id="menu">
-            <li><a href="#frontpage" class="frontpage sel">Titulka</a></li>
-            <li><a href="#most-read-4-hrs" class="naj4h">Naj za 4h</a></li>
+            <li><a href="#" class="sel" data-rss="frontpage">Titulka</a></li>
+            <li><a href="#" data-rss="smenajcit4">Naj za 4h</a></li>
+            <li><a href="#" data-rss="smenajcit24">Naj za 24h</a></li>
+            <li><a href="#" data-rss="zdom">Z domova</a></li>
+            <li><a href="#" data-rss="zahr">Zahraničie</a></li>
+            <li><a href="#" data-rss="ekon">Ekonomika</a></li>
+            <li><a href="#" data-rss="kult">Kultúra</a></li>
+            <li><a href="#" data-rss="sport">Šport</a></li>
         </ul>
-        <ul id="headlines"></ul>
+        
+        <ul id="headlines">
+            <li><a href="http://www.sme.sk/c/6543029/vodic-ktory-zabil-v-moskve-sedem-ludi-mal-som-sa-strelit-do-hlavy.html">Title</a><br>
+                Description text for the article goes here. This is a description.<br>
+                <span class="pubDate">Sun, Sep 1, 2012 10:15:00 GMT</span></li>
+        </ul>
     </div>
 
     <div id="articleWr">
@@ -46,7 +61,9 @@
         <span id="btnBack"></span>
     </div>
 
-    <script src="zepto.min.js"></script>
+
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/moment.min.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
