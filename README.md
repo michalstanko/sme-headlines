@@ -5,6 +5,7 @@ Description
 -----------
 
 English: Quickly preview the current most-read articles on the Slovak news website SME.sk.
+
 Slovak: Rýchly prehľad aktuálne najčítanejších článkov na spravodajskom portáli SME.sk
 
 Install
