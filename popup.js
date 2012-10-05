@@ -70,7 +70,9 @@ function fetchRss(feedUrl) {
                 var link = $item.find("link").text();
                 var description = $item.find("description").text();
                 var pubDate = $item.find("pubDate").text();
-                html += "<li><a href='" + link + "'>" + title + "</a><br>" + ((description) ? description + "<br>" : "") + "<span class='pubDate'>" + pubDate + "</span></li>";
+                html += "<li><a href='" + link + "'>" + title + "</a><br>" + ((description) ? description + "<br>" : "");
+                html += "<span class='pubDate'>" + ( moment(pubDate).format("D. M. YYYY HH:mm") ) + "</span>";
+                html += "</li>";
             });
             $headlines.html(html);
         },
