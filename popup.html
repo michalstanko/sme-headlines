@@ -4,12 +4,19 @@
     <meta charset="utf-8" />
     <title></title>
     <style>
+    @font-face {
+      font-family: 'Titillium Web';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(fonts/TitilliumWeb-Regular.ttf) format('truetype');
+    }
+
     html, body, table, ul, ol, li { padding:0; margin:0; }
 
     html { width:450px; }
-    body { padding:10px 5px; font:13px/1.46 Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2);}
+    body { padding:10px 5px; font:15px/1.46 'Titillium Web', Verdana,sans-serif; color:#111; text-shadow:1px 1px 10px rgba(0, 0, 0, .2);}
 
-    #menu { float:left; margin:0; margin-bottom:1em; font-size:11px; list-style:none; }
+    #menu { float:left; margin:0; margin-bottom:1em; font-size:12px; list-style:none; }
     #menu li, #menu a { float:left; margin:0; padding:0; }
     #menu a { width:80px /*110px*/; padding:3px 15px; font-weight:bold; letter-spacing:-1px; text-align:center; text-decoration:none; color:#5F5F5F; background:#eee; outline:none;
         -webkit-transition-property: color;
@@ -19,12 +26,12 @@
     #menu a.sel { color:#A7090C; background:#fff; }
     
     #headlines { clear:both; list-style: none; }
-    #headlines a { color:#A7090C; font-size:14px; font-weight:bold; text-decoration:none}
+    #headlines a { color:#A7090C; font-size:17px; font-weight:bold; text-decoration:none}
     #headlines li { margin:0; padding:5px; border-radius:8px; cursor:pointer; }
     #headlines li:hover { position:relative; top:1px; left:1px; background:#f4f4f4; }
     .pubDate { color:#666; font-size:11px; }
 
-    #articleWr { display:none; font-size:14px; padding:0 10px; }
+    #articleWr { display:none; font-size:16px; padding:0 10px; }
     #articleWr h1 { font-size:25px; line-height:1; letter-spacing:-1px; color:#990003; }
     #articleWr ol, #articleWr ul { margin-left:3em; }
     #articleWr p, #articleWr ul, #articleWr ol, #articleWr table { margin-bottom:.8em; }
